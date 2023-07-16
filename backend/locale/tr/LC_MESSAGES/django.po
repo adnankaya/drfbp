@@ -1,0 +1,91 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-16 14:29+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: apps/api/views.py:9
+msgid "Hello world!"
+msgstr "Merhaba dünya!"
+
+#: apps/core/models.py:19
+msgid "Active"
+msgstr ""
+
+#: apps/core/models.py:20
+msgid "Passive"
+msgstr ""
+
+#: apps/core/permissions.py:25
+msgid "Requested user is not the owner of this user object"
+msgstr ""
+
+#: apps/users/forms.py:12
+msgid "Email or Username or Password"
+msgstr ""
+
+#: apps/users/forms.py:26
+msgid "User does not exist!"
+msgstr ""
+
+#: apps/users/forms.py:29
+msgid "Password is incorrect!"
+msgstr ""
+
+#: apps/users/models.py:26
+msgid "Superuser must have is_staff=True."
+msgstr ""
+
+#: apps/users/models.py:28
+msgid "Superuser must have is_admin=True."
+msgstr ""
+
+#: apps/users/models.py:30
+msgid "Superuser must have is_superuser=True."
+msgstr ""
+
+#: apps/users/models.py:38
+msgid "The email must be set"
+msgstr ""
+
+#: apps/users/models.py:59
+msgid "last login"
+msgstr ""
+
+#: apps/users/serilaizers.py:28
+msgid "Passwords did not match!"
+msgstr ""
+
+#: apps/users/serilaizers.py:58
+msgid "password is wrong"
+msgstr ""
+
+#: apps/users/serilaizers.py:60
+msgid "password and password2 do not match"
+msgstr ""
+
+#: apps/users/views.py:40
+msgid "You do not have permission to change this password"
+msgstr ""
+
+#: src/settings/base.py:102
+msgid "English"
+msgstr ""
+
+#: src/settings/base.py:103
+msgid "Turkish"
+msgstr ""

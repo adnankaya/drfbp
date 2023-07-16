@@ -1,0 +1,50 @@
+version: '3.7'
+services:
+  backend:
+    container_name: backend
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/usr/src/app/
+    ports:
+      - 8000:8000
+    env_file:
+      - ./backend/.env
+    command: >
+      sh -c "python manage.py migrate && python manage.py init_all && python manage.py runserver 0.0.0.0:8000"
+    environment:
+      - DB_HOST=db
+      - DB_NAME=db_drfbp
+      - DB_USER=developer
+      - DB_PASS=developer
+      - REDIS_HOSTNAME=redis
+      - REDIS_PORT=6379
+    # restart: always
+    stdin_open: true
+
+  db:
+    image: postgres:12.12
+    container_name: db-drfbp
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-developer}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-developer}
+      PGDATA: /data/postgres
+    volumes:
+      - postgres_volume:/data/postgres
+    tty: true
+
+  redis:
+    image: redis:5.0.7
+    container_name: redis-drfbp
+    ports:
+      - 6379:6379
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+
+volumes:
+  postgres_volume:
+
+
